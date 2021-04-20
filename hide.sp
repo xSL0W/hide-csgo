@@ -231,7 +231,7 @@ public Action OnNormalSoundPlayed(int clients[MAXPLAYERS], int &numClients, char
 		{
             if(clients[i] > 0 && clients[i] <= MaxClients)
             {
-			    if (g_bHide[clients[i]] && g_iClientTeam[target] == g_iClientTeam[clients[i]])
+			    if (g_bIsAlive[clients[i]] && g_bHide[clients[i]] && clients[i] != target && g_iClientTeam[target] == g_iClientTeam[clients[i]] )
 			    {
 			    	for (j = i; j < numClients - 1; j++)
 			    	{
